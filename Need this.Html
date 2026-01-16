@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krenital.Co</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #fafafa;
+            color: #333;
+            text-align: center;
+        }
+
+        .page-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid black;
+            padding: 20px;
+            background: white;
+            min-height: 70vh;
+        }
+
+        .character-art {
+            height: 200px;
+            width: 200px;
+            background: black;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+        .character-art::after { content: 'Character Art'; color: white; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 0.8rem;}
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        nav a:hover { text-decoration: underline; }
+        nav a.active { font-weight: bold; text-decoration: underline; }
+
+        .content-section {
+            display: none;
+            text-align: left;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+        
+        ul { padding-left: 20px; }
+
+        /* Graphics Gallery Specific Styles */
+        .graphics-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .character-section {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            padding: 15px;
+            width: 100%;
+        }
+
+        .character-title {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+        }
+
+        .character-title hr {
+            border: 1px solid #ccc;
+            width: 80%;
+            margin: 5px auto 15px auto;
+        }
+
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .image-grid img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 6px;
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <div class="character-art"></div>
+
+        <nav>
+            <a onclick="showPage('home', this)" class="active">Home</a>
+            <a onclick="showPage('about', this)">About me</a>
+            <a onclick="showPage('commissions', this)">Commissions</a>
+            <a onclick="showPage('links', this)">Links</a>
+            <a onclick="showPage('graphics', this)">Graphics</a>
+            <a onclick="showPage('codes', this)">Codes</a>
+        </nav>
+
+        <!-- HOME -->
+        <div id="home" class="content-section active">
+            <h2>Welcome Home!</h2>
+            <p>This is your main landing page content. Click the links above to see specific sections.</p>
+        </div>
+
+        <!-- ABOUT ME -->
+        <div id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>Artist, coder, and creator. View my latest works and character designs here.</p>
+        </div>
+
+        <!-- COMMISSIONS -->
+        <div id="commissions" class="content-section">
+            <h2>Commissions</h2>
+            <p>Status: <strong>Open</strong></p>
+            <ul>
+                <li>Headshot: $XX</li>
+                <li>Full Body: $XX</li>
+            </ul>
+        </div>
+
+        <!-- LINKS -->
+        <div id="links" class="content-section">
+            <h2>Links</h2>
+            <ul>
+                <li>• <a href="https://toyhou.se" target="_blank">Toyhouse</a></li>
+                <li>• <a href="https://instagram.com" target="_blank">Instagram</a></li>
+                <li>• <a href="https://twitter.com" target="_blank">Twitter</a></li>
+                <li>• <a href="https://t.me" target="_blank">Telegram</a></li>
+            </ul>
+        </div>
+
+        <!-- GRAPHICS -->
+        <div id="graphics" class="content-section">
+            <h2>Graphics & Assets</h2>
+            <div class="graphics-container">
+                <!-- SONIC -->
+                <div class="character-section">
+                    <div class="character-title"><br>Sonic<hr></div>
+                    <div class="image-grid">
+  <img src="https://files.catbox.moe/j3id26.gif">
+  <img src="https://files.catbox.moe/7lj2r4.gif">
+  <img src="https://files.catbox.moe/2klalf.gif">
+  <img src="https://files.catbox.moe/fwljeg.gif">
+  <img src="https://files.catbox.moe/seoah0.gif">
+  <img src="https://files.catbox.moe/784qdb.gif">
+  <img src="https://files.catbox.moe/bh10pz.gif">
+  <img src="https://files.catbox.moe/680ect.gif">
+                    </div>
+                </div>
+
+                <!-- KNUCKLES -->
+                <div class="character-section">
+                    <div class="character-title"><br>Knuckles<hr></div>
+                    <div class="image-grid">
+                          <img src="https://files.catbox.moe/kxeaqj.gif">
+  <img src="https://files.catbox.moe/02fbtj.gif">
+  <img src="https://files.catbox.moe/1sbp47.gif">
+                    </div>
+                </div>
+            </div>           
+        </div>
+
+        <!-- CODES -->
+        <div id="codes" class="content-section">
+            <h2>Codes</h2>
+            <ul>
+                <li>Toyhouse resources</li>
+                <li>HTML img code generator</li>
+            </ul>
+        </div>
+
+        <div style="position: relative; text-align: right; margin-top: 50px;">
+            <div style="display: inline-block; padding: 5px 10px; border: 1px solid black; background: #fff; margin-right: 10px;">hallo :)!!</div>
+            👻
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId, clickedElement) {
+            var sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+
+            var navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(function(link) {
+                link.classList.remove('active');
+            });
+            clickedElement.classList.add('active');
+        }
+    </script>
+</body>
+</html>
